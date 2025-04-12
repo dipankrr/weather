@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:weather_new/views/widgets/hourly_card.dart';
@@ -6,14 +5,20 @@ import 'package:weather_new/views/widgets/hourly_card.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  final String netImg = 'https://www.transparenttextures.com/patterns/asfalt-light.png';
+  final String netImgFreepik = 'https://img.freepik.com/free-vector/abstract-background-black-white-texture-grainy_474888-5175.jpg?t=st=1744394609~exp=1744398209~hmac=60fbdb4dbe92aaf8ab2c59e2be6de54f42b785277e26db712810632dd2ba52dd&w=740';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         height: double.infinity, width: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-vector/abstract-background-black-white-texture-grainy_474888-5175.jpg?t=st=1744394609~exp=1744398209~hmac=60fbdb4dbe92aaf8ab2c59e2be6de54f42b785277e26db712810632dd2ba52dd&w=740'),
-              fit:BoxFit.fill,opacity: 0.2 ),
+          image: DecorationImage(
+              image: AssetImage(
+                  'assets/others/noise.jpg'),
+              fit:BoxFit.fill, opacity: 0.2,
+          ),
           gradient: RadialGradient(
             colors: [Colors.red.withOpacity(0.4), Colors.red.withOpacity(0.15)],
             //colors: [Colors.black.withOpacity(0.2), Colors.black.withOpacity(0.5)],
